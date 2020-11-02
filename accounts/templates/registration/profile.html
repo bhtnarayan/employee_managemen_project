@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block css %} .col-sm-5 { 
+    border:1px solid black;
+    border-radius:5px; 
+    padding:12px; 
+    margin-left:auto;
+    margin-right:auto;
+    } 
+    
+    {% endblock css %} 
+{% block content %}
+
+<div class="container">
+<div class="row">
+<div class="col-sm-5">
+<h2 style = "text-align:center;">Profile</h2>
+<hr>
+<p><strong>Username: </strong> {{ user.username}}</p>
+<p><strong>First Name: </strong> {{user.first_name}}</p>
+<p><strong>Last Name: </strong>{{user.last_name}}</p>
+<p><strong>Email: </strong>{{user.email}}</p>
+
+<a href="{% url 'edit_profile' %}" class="btn btn-outline-success"><i class="fas fa-plus mr-2"></i>Edit Profile</a>
+</div>
+</div>
+</div>
+
+{% endblock content %}
+
